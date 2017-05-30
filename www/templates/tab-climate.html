@@ -1,0 +1,29 @@
+<ion-view view-title="Climate" cache-view=false>
+  <ion-content class="padding">
+    <h4>Climatological Data</h4>
+    <form ng-submit="submit()">
+      <div class="list">
+        <label for="" class="item item-input">
+          <span class="input-label">Rainfall</span>
+          <input type="number" placeholder="10" ng-model="climate.rainfall" required>
+        </label>
+        <label for="" class="item item-input">
+          <span class="input-label">Temperature</span>
+          <input type="number" placeholder="10" ng-model="climate.temperature" required>
+        </label>
+        <label for="" class="item item-input">
+          <span class="input-label">Humidity</span>
+          <input type="number" placeholder="10" ng-model="climate.humidity" required>
+        </label>
+      </div>
+      <div class="row">
+        <div class="col col-40">
+          <button type="button" class="button button-full button-assertive icon-left ion-chevron-left" ng-click="back()">Back</button>    
+        </div>
+        <div class="col col-40 col-offset-20" style="text-align: right">
+          <button type="submit" class="button button-full button-balanced icon-right ion-chevron-right">Submit</button>    
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

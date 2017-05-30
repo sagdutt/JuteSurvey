@@ -1,0 +1,38 @@
+<ion-view view-title="Personal Details" cache-view=false>
+  <ion-content class="padding">
+    <form ng-submit="next()">
+      <div class="list">
+        <label for="" class="item item-input item-floating-label">
+          <span class="input-label"></span>
+          <input type="text" ng-model="personal.farmerName" placeholder="Name of farmer" required>
+        </label>
+        <label for="" class="item item-input item-floating-label">
+          <span class="input-label"></span>
+          <input type="text" ng-model="personal.block" placeholder="Block" required>
+        </label>
+        <label for="" class="item item-input item-floating-label">
+          <span class="input-label"></span>
+          <input type="text" ng-model="personal.village" placeholder="Village" required>
+        </label>
+        <label for="" class="item item-input item-floating-label">
+          <span class="input-label"></span>
+          <input type="text" ng-model="personal.address" placeholder="Address" required>
+        </label>
+        <label for="" class="item item-input item-floating-label">
+          <span class="input-label"></span>
+          <input type="number" ng-model="personal.mobile" placeholder="Mobile number" required>
+        </label>
+        <label for="" class="item item-input item-floating-label">
+          <span class="input-label"></span>
+          <input type="text" ng-model="personal.interviewerName" placeholder="Interviewer's name" required>
+        </label>
+      </div>
+      <div class="row">
+        <div class="col col-60"></div>
+        <div class="col col-40" style="text-align: right">
+          <button type="submit" class="button button-full button-balanced icon-right ion-chevron-right" >Next</button>    
+        </div>
+      </div>
+    </form>    
+  </ion-content>
+</ion-view>

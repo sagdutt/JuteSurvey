@@ -1,0 +1,40 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <ion-tab title="Home" icon-off="ion-ios-home" icon-on="ion-ios-home" href="#/tab/home" hidden=true>
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Personal" icon-off="ion-ios-person" icon-on="ion-ios-person" href="#/tab/personal">
+    <ion-nav-view name="tab-personal"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab title="Land" icon-off="ion-earth" icon-on="ion-earth" href="#/tab/land">
+    <ion-nav-view name="tab-land"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Fertility" icon-off="ion-stats-bars" icon-on="ion-stats-bars" href="#/tab/fertility">
+    <ion-nav-view name="tab-fertility"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab title="Sowing" icon-off="ion-leaf" icon-on="ion-leaf" href="#/tab/sowing">
+    <ion-nav-view name="tab-sowing"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab title="Water" icon-off="ion-waterdrop" icon-on="ion-waterdrop" href="#/tab/water">
+    <ion-nav-view name="tab-water"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Climate" icon-off="ion-ios-rainy" icon-on="ion-ios-rainy" href="#/tab/climate">
+    <ion-nav-view name="tab-climate"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="End" href="#/tab/end" hidden=true>
+    <ion-nav-view name="tab-end"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

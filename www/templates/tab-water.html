@@ -1,0 +1,50 @@
+<ion-view view-title="Water" cache-view=false>
+  <ion-content class="padding">
+    <form ng-submit="next()">
+      <div class="list">
+        <h5>Method of retting</h5>
+        <ion-list>
+          <ion-radio name="method" ng-model="water.rettingMethod" ng-value="'Conventional'">Conventional</ion-radio>
+          <ion-radio name="method" ng-model="water.rettingMethod" ng-value="'Chemical'">Chemical</ion-radio>
+          <ion-radio name="method" ng-model="water.rettingMethod" ng-value="'Bacterial'">Bacterial</ion-radio>
+          <ion-radio name="method" ng-model="water.rettingMethod" ng-value="'Fungal'">Fungal</ion-radio>
+          <ion-radio name="method" ng-model="water.rettingMethod" ng-value="'Microbial'">Mechano-microbial(Ribbon retting)</ion-radio>
+        </ion-list>
+        <div ng-show="water.rettingMethod=='Conventional'">
+          <h5>Source of water</h5>
+          <ion-list>
+          <ion-radio name="source" ng-model="water.source" ng-value="'Pond'">Pond(pukur)</ion-radio>
+          <ion-radio name="source" ng-model="water.source" ng-value="'Canal'">Canal(khal)</ion-radio>
+          <ion-radio name="source" ng-model="water.source" ng-value="'Roadside'">Roadside water bodies(bil)</ion-radio>
+        </ion-list> 
+        </div>
+        <h5>Availability of water for washing</h5>
+        <ion-list>
+          <ion-radio name="availability" ng-model="water.availability" ng-value="'Abundant'">Abundant</ion-radio>
+          <ion-radio name="availability" ng-model="water.availability" ng-value="'Sufficient'">Sufficient</ion-radio>
+          <ion-radio name="availability" ng-model="water.availability" ng-value="'Insufficient'">Insufficient</ion-radio>
+        </ion-list>
+        <h5>Quality of water used</h5>
+        <ion-list>
+          <ion-radio name=quality"" ng-model="water.quality" ng-value="'Clean'">Clean</ion-radio>
+          <ion-radio name=quality"" ng-model="water.quality" ng-value="'Dark'">Dark color</ion-radio>
+          <ion-radio name=quality"" ng-model="water.quality" ng-value="'Infested'">Water infested with weeds</ion-radio>
+        </ion-list>
+        <br>
+        <label for="" class="item item-input">
+            <span class="input-label">Number of days for complete retting</span>
+            <input type="number" placeholder="10" ng-model="water.daysForCompleteRetting">
+          </label>  
+      </div>
+      <div class="row">
+        <div class="col col-40">
+          <button type="button" class="button button-full button-assertive icon-left ion-chevron-left" ng-click="back()">Back</button>    
+        </div>
+        <div class="col col-40 col-offset-20" style="text-align: right">
+          <button type="submit" class="button button-full button-balanced icon-right ion-chevron-right" >Next</button>    
+        </div>
+      </div>
+    </form>
+  	
+  </ion-content>
+</ion-view>

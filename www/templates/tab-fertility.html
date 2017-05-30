@@ -1,0 +1,61 @@
+<ion-view view-title="Fertility" cache-view=false>
+  <ion-content class="padding">
+    <form ng-submit="next()">
+      <div class="list">
+        <h5>How much fertilizer is applied in the field and name of fertilizer?</h5>
+        <div class="list">
+          <label for="" class="item item-input">
+            <span class="input-label">Nitrogenous</span>
+            <input type="number" placeholder="10" ng-model="fertility.nitrogenous.amount" required>
+          </label>
+          <label for="" class="item item-input item-floating-label">
+            <span class="input-label"></span>
+            <input type="text" placeholder="Name of fertilizer" ng-model="fertility.nitrogenous.name">
+          </label>  
+        </div>
+        <div class="list">
+          <label for="" class="item item-input">
+            <span class="input-label">Phosphatic</span>
+            <input type="number" placeholder="10" ng-model="fertility.phosphatic.amount" required>
+          </label>
+          <label for="" class="item item-input item-floating-label">
+            <span class="input-label"></span>
+            <input type="text" placeholder="Name of fertilizer" ng-model="fertility.phosphatic.name">
+          </label>  
+        </div>
+        <div class="list">
+          <label for="" class="item item-input">
+            <span class="input-label">Potassic</span>
+            <input type="number" placeholder="10" ng-model="fertility.potassic.amount" required>
+          </label>
+          <label for="" class="item item-input item-floating-label">
+            <span class="input-label"></span>
+            <input type="text" placeholder="Name of fertilizer" ng-model="fertility.potassic.name">
+          </label>  
+        </div>  
+        <h5>Please select one:</h5>
+        <ion-list>
+          <ion-radio ng-model="choice" ng-value="'FYM'">FYM(Gobor sar)</ion-radio>
+          <label for="" ng-show="choice=='FYM'" class="item item-input">
+            <span class="input-label">Amount</span>
+            <input type="number" placeholder="10" ng-model="fertility.fym.amount">
+          </label>
+          <br>  
+          <ion-radio ng-model="choice" ng-value="'Compost'">Compost</ion-radio>
+          <label for="" ng-show="choice=='Compost'" class="item item-input">
+            <span class="input-label">Amount</span>
+            <input type="number" placeholder="10" ng-model="fertility.compost.amount">
+          </label>
+        </ion-list>             
+      </div>
+      <div class="row">
+        <div class="col col-40">
+          <button type="button" class="button button-full button-assertive icon-left ion-chevron-left" ng-click="back()">Back</button>    
+        </div>
+        <div class="col col-40 col-offset-20" style="text-align: right">
+          <button type="submit" class="button button-full button-balanced icon-right ion-chevron-right">Next</button>    
+        </div>
+      </div>  
+    </form>    
+  </ion-content>
+</ion-view>

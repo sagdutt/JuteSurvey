@@ -1,0 +1,57 @@
+<ion-view view-title="Land" cache-view=false>
+  <ion-content class="padding">
+    <form ng-submit="next()">
+      <div class="list">
+        <label for="" class="item item-input">
+          <span class="input-label">Total cultivable land you have(ha)</span>
+          <input type="number" ng-model="land.total" placeholder="100" required>
+        </label>
+        <label for="" class="item item-input">
+          <span class="input-label">Area used for jute cultivation(ha)</span>
+          <input type="number" ng-model="land.juteArea" placeholder="48" required>
+        </label>
+      </div>
+      
+      <h5>What is the type of soil used for cultivation?</h5>
+      <ion-list ng-init="land.soilType='Sandy'">
+        <ion-radio name="soilType" ng-model="land.soilType" ng-value="'Sandy'">Sandy(Bele)</ion-radio>
+        <ion-radio name="soilType" ng-model="land.soilType" ng-value="'Clayey'">Clayey(Entel)</ion-radio>
+        <ion-radio name="soilType" ng-model="land.soilType" ng-value="'Donash'">Donash(Loam)</ion-radio>
+      </ion-list>
+
+      <h5>Whether got soil heath card/soil report?</h5>
+      <ion-list ng-init="land.status='No'">
+        <ion-radio name="status" ng-model="land.status" ng-value="'Yes'">Yes</ion-radio>
+        <ion-radio name="status" ng-model="land.status" ng-value="'No'" >No</ion-radio>
+      </ion-list>
+      <div ng-show="land.status=='Yes'">
+        <h5>What is the fertility status?</h5>
+        <label for="" class="item item-input">
+          <span class="input-label">Nitrogen(kg/ha)</span>
+          <input type="number" placeholder="10" ng-model="land.fertility.nitrogen">
+        </label>
+        <label for="" class="item item-input">
+          <span class="input-label">Phosphorus(kg/ha)</span>
+          <input type="number" placeholder="10" ng-model="land.fertility.phosphorus">
+        </label>
+        <label for="" class="item item-input">
+          <span class="input-label">Potassium(kg/ha)</span>
+          <input type="number" placeholder="10" ng-model="land.fertility.potassium">
+        </label>
+        <label for="" class="item item-input">
+          <span class="input-label">Organic Matter(%)</span>
+          <input type="number" placeholder="10" ng-model="land.fertility.organic">
+        </label>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col col-40">
+          <button type="button" class="button button-full button-assertive icon-left ion-chevron-left" ng-click="back()">Back</button>    
+        </div>
+        <div class="col col-40 col-offset-20" style="text-align: right">
+          <button type="submit" class="button button-full button-balanced icon-right ion-chevron-right">Next</button>    
+        </div>
+      </div>
+    </form>    
+  </ion-content>
+</ion-view>
